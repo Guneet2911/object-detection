@@ -1,0 +1,36 @@
+body
+{
+ background-position: center;
+ background-size: cover;
+ text-align: center;
+}
+
+#back
+{
+    background-color: black;
+    color:white;
+    width:70px;
+    float:right;
+    font-size:25px;
+}
+
+.heading
+{
+    width:100%;
+    margin:0;
+    font-size:30px;
+}
+
+canvas
+{
+ animation-name: example ;
+ animation-duration: 4s ;
+ animation-iteration-count: infinite;
+ border-radius:20px;
+}
+
+@keyframes example{
+    from{box-shadow: 1px 1px 38px purple;}
+    to{box-shadow: 1px 1px 38px blue;} 
+}
+    
