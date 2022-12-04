@@ -28,6 +28,8 @@
             }
 
             img = "";
+            status = "";
+            objects = [];
 
             function preload()
             {
@@ -38,6 +40,25 @@
             {
                 canvas = createCanvas(640 , 480);
                 canvas.center();
+                objectDetection = ml5.objectDetector("cocossd" , modelLoaded);
+                document.getElementById("status").innerHTML = "Status : Detecting Objects";
+            }
+
+            function modelLoaded()
+            {
+                console.log("Model Loaded!");
+                status = true;
+                objectDetection.detect(img , gotResult);
+            }
+
+            function gotResult(error , results)
+            {
+                if(error)
+                {
+                    console.log(error);
+                }
+                console.log(results);
+                objects = results;
             }
 
             function draw()
