@@ -1,6 +1,6 @@
 function next()
 {
-    window.location = "utensils.html";
+    window.location = "cat.html";
 }
 
 function next1()
